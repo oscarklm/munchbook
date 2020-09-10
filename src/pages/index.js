@@ -1,6 +1,9 @@
 import React from 'react';
 
 export default function index() {
+  const handleOnClick = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className="flex bg-gray-100">
@@ -22,10 +25,16 @@ export default function index() {
               on vacation.
             </p>
             <div className="mt-4 sm:mt-6">
-              <a href="#" className="shadow-lg btn btn-indigo sm:text-base">
+              <a
+                onClick={handleOnClick}
+                className="shadow-lg btn btn-indigo sm:text-base"
+              >
                 Book your escape
               </a>
-              <a href="#" className="ml-2 btn btn-gray sm:text-base">
+              <a
+                onClick={handleOnClick}
+                className="hidden ml-2 btn btn-gray sm:text-base xl:inline-block sm:inline-block"
+              >
                 Learn more
               </a>
             </div>
