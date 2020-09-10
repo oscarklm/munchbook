@@ -13,17 +13,21 @@ export default function index() {
         <RestaurantCard
           restaurant={{
             name: 'Ssam Korean Food',
+            location: 'Vesterbro',
             desc:
               'Delicious korean food, and nice sparkly cocktails. Also a nice place to listen to some k-pop and drink soju with friends!',
-            url: './img/restaurants/ssam.jpg'
+            url: './img/restaurants/ssam.jpg',
+            tags: ['korean', 'food', 'bbq']
           }}
         />
         <RestaurantCard
           restaurant={{
             name: 'April Coffee',
+            location: 'Østerbro',
             desc:
               'Amazing coffee in Østerbro, made with in-house roasted coffee beans freshly imported with love.',
-            url: './img/restaurants/april.png'
+            url: './img/restaurants/april.png',
+            tags: ['coffee', 'roastery', 'tools']
           }}
         />
       </div>
