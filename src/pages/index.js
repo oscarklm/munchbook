@@ -5,7 +5,9 @@ export default function index() {
   return (
     <>
       <div>
-        <h1 className="pt-8 text-5xl font-black text-center ">TheMunchBook</h1>
+        <h1 className="pt-8 text-3xl font-black text-center sm:text-5xl ">
+          TheMunchBook
+        </h1>
       </div>
       <div className="max-w-screen-md px-8 mx-auto">
         <RestaurantCard
