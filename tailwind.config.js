@@ -1,13 +1,15 @@
 module.exports = {
   future: {
-    removeDeprecatedGapUtilities: true
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
   },
-  purge: process.env.NODE_ENV === 'production' && [
-    '.src/components/**/*.{js,ts,jsx,tsx}',
-    '.src/pages/**/*.{js,ts,jsx,tsx}'
-  ],
+  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'accent-1': '#333'
+      }
+    }
   },
   variants: {},
   plugins: []
