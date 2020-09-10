@@ -1,9 +1,11 @@
 module.exports = {
   future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true
+    removeDeprecatedGapUtilities: true
   },
-  purge: [],
+  purge: process.env.NODE_ENV === 'production' && [
+    '.src/components/**/*.{js,ts,jsx,tsx}',
+    '.src/pages/**/*.{js,ts,jsx,tsx}'
+  ],
   theme: {
     extend: {}
   },
