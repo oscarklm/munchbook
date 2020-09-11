@@ -58,7 +58,7 @@ export default function index() {
             desc:
               'This cozy bakery located in Islands Brygge is one of the best, if not the best in Denmark. Freshly baked bread, and beautiful cakes.',
             url: './img/restaurants/bakery.webp',
-            tags: ['Pizza', 'Italian', 'StoneOven']
+            tags: ['Bakery', 'Pastry', 'Cakes']
           }}
         />
       </div>
