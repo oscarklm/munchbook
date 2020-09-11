@@ -22,42 +22,50 @@ export default function index() {
           Restaurants near you...
         </h1>
         <RestaurantCard
+          key="ssam"
           restaurant={{
             name: 'Ssam Korean Food',
             location: 'Vesterbro',
             desc:
               'Delicious korean food, and nice sparkly cocktails. Also a nice place to listen to some k-pop and drink soju with friends!',
-            url: './img/restaurants/ssambar.webp',
+            imgUrl: '/img/restaurants/ssambar.webp',
+            imgFallback: './img/restaurants/ssambar.jpg',
             tags: ['Korean', 'Food', 'BBQ']
           }}
         />
         <RestaurantCard
+          key="april"
           restaurant={{
             name: 'April Coffee',
             location: 'Østerbro',
             desc:
               'Amazing coffee in Østerbro, made with in-house roasted coffee beans freshly imported with love.',
-            url: './img/restaurants/aprilcoffee.webp',
+            imgUrl: './img/restaurants/aprilcoffee.webp',
+            imgFallback: './img/restaurants/aprilcoffee.jpg',
             tags: ['Coffee', 'Roastery', 'Tools']
           }}
         />
         <RestaurantCard
+          key="pizza"
           restaurant={{
             name: 'Pizza Bro',
             location: 'Islands Brygge',
             desc:
               'Real nice italian Pizza made in stone oven, it crazy what comes out of this little pizza truck.',
-            url: './img/restaurants/pizzabro.webp',
+            imgUrl: './img/restaurants/pizzabro.webp',
+            imgFallback: './img/restaurants/pizzabro.jpg',
             tags: ['Pizza', 'Italian', 'StoneOven']
           }}
         />
         <RestaurantCard
+          key="anderson"
           restaurant={{
             name: 'Anderson Bakery',
             location: 'Islands Brygge',
             desc:
               'This cozy bakery located in Islands Brygge is one of the best, if not the best in Denmark. Freshly baked bread, and beautiful cakes.',
-            url: './img/restaurants/bakery.webp',
+            imgUrl: './img/restaurants/bakery.webp',
+            imgFallback: './img/restaurants/bakery.jpg',
             tags: ['Bakery', 'Pastry', 'Cakes']
           }}
         />

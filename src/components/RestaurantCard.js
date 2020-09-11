@@ -1,15 +1,17 @@
 import React from 'react';
+import { isSafari } from 'react-device-detect';
 
 export default function RestaurantCard({ restaurant }) {
-  const { name, location, desc, url, tags } = restaurant;
+  const { name, location, desc, imgUrl, imgFallback, tags } = restaurant;
+  console.log(isSafari);
   return (
     <div className="flex-none w-full mb-6 border-t-2 border-r-2 border-gray-200 rounded-lg shadow-lg sm:flex">
       <img
-        className="flex-none object-cover w-full h-48 rounded-t-lg sm:rounded-l-lg sm:rounded-t-none sm:h-auto sm:w-56"
-        src={url}
+        className="flex-none object-cover rounded-t-lg sm:w-56 sm:h-auto sm:rounded-t-none sm:rounded-l-lg"
+        src={imgFallback}
         alt={name}
-      ></img>
-      <div className="flex flex-col justify-between p-4 leading-normal">
+      />
+      <div className="flex flex-col justify-between p-4">
         <div className="mb-8">
           <div className="text-xl font-bold text-gray-900 sm:text-2xl">
             {name}
@@ -21,9 +23,12 @@ export default function RestaurantCard({ restaurant }) {
           <p className="text-base text-gray-700">{desc}</p>
         </div>
         <div className="items-center justify-center flex-none sm:flex">
-          <div class=" flex-1 items-center justify-center">
+          <div className="items-center justify-center flex-1 ">
             {tags.map((tag) => (
-              <span class="inline-block bg-gray-200 rounded-full p-2 text-sm font-semibold text-gray-700 mx-1">
+              <span
+                key={tag}
+                className="inline-block p-2 mx-1 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+              >
                 #{tag}
               </span>
             ))}
@@ -35,7 +40,7 @@ export default function RestaurantCard({ restaurant }) {
                 e.preventDefault();
               }}
             >
-              Read more...
+              Read more
             </a>
           </div>
         </div>
