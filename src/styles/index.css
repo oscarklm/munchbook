@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 
+#menu-toggle:checked + #menu {
+  display: block;
+}
+
 .btn {
   @apply inline-block px-4 py-3 text-sm font-semibold tracking-wider uppercase rounded-lg;
 }

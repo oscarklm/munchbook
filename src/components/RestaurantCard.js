@@ -3,7 +3,6 @@ import { isSafari } from 'react-device-detect';
 
 export default function RestaurantCard({ restaurant }) {
   const { name, location, desc, imgUrl, imgFallback, tags } = restaurant;
-  console.log(isSafari);
   return (
     <div className="flex-none w-full mb-6 border-t-2 border-r-2 border-gray-200 rounded-lg shadow-lg sm:flex">
       <img
