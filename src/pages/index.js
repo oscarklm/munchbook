@@ -28,7 +28,7 @@ const Index = ({ venues }) => {
 };
 
 Index.getInitialProps = async () => {
-  const res = await fetch('http://localhost:3000/api/venues');
+  const res = await fetch('http://themunchbook.com/api/venues');
   const { data } = await res.json();
 
   return { venues: data };
