@@ -1,20 +1,42 @@
 import React from 'react';
 import RestaurantCard from '../components/RestaurantCard';
 import Link from 'next/link';
-import fetch from 'isomorphic-unfetch';
+import fetch from 'unfetch';
+import useSWR from 'swr';
 
-const Index = ({ venues }) => {
+const fetcher = async (path) => {
+  const res = await fetch(path);
+
+  return res.json();
+};
+
+const Index = () => {
+  const { data, error } = useSWR('/api/venues', fetcher);
+
+  if (error) {
+    return <div>Failed to load...</div>;
+  }
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
-      <div className="container">
-        <h1>Venues</h1>
-        <div className="grid justify-center grid-rows-1 gap-4 sm:grid-cols-3">
-          {venues.map((venue) => {
+      <div className="container mx-auto">
+        <h1 className="py-4 text-3xl font-extrabold text-center">Venues</h1>
+        <div className="grid justify-center grid-cols-1 gap-8">
+          {data.map((venue) => {
             return (
-              <div>
-                <div className="p-4 m-4 bg-gray-500">
-                  <Link href={`/${venue._id}`}>
-                    <a>{venue.title}</a>
+              <div key={venue._id}>
+                <div
+                  className="p-4 bg-gray-400 rounded-lg shadow-lg cursor-pointer"
+                  onClick={() => {}}
+                >
+                  <Link href={`/venues/${venue._id}`}>
+                    <a className="text-2xl font-bold hover:text-gray-700">
+                      {venue.title}
+                    </a>
                   </Link>
                   <p>{venue.description}</p>
                 </div>
@@ -25,13 +47,6 @@ const Index = ({ venues }) => {
       </div>
     </>
   );
-};
-
-Index.getInitialProps = async () => {
-  const res = await fetch('http://themunchbook.com/api/venues');
-  const { data } = await res.json();
-
-  return { venues: data };
 };
 
 export default Index;

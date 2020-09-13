@@ -8,12 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "isomorphic-unfetch": "^3.0.0",
     "mongoose": "^5.10.5",
     "next": "9.5.1",
     "react": "16.13.1",
     "react-device-detect": "^1.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "swr": "^0.3.2",
+    "unfetch": "^4.1.0"
   },
   "devDependencies": {
     "postcss-flexbugs-fixes": "^4.2.1",

@@ -24,7 +24,7 @@ const Navbar = () => (
           </a>
         </Link>
       </div>
-      <label for="menu-toggle" className="block cursor-pointer lg:hidden">
+      <label htmlFor="menu-toggle" className="block cursor-pointer lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
