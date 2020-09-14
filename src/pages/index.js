@@ -1,25 +1,15 @@
 import React from 'react';
 import RestaurantCard from '../components/RestaurantCard';
 import Link from 'next/link';
-import fetch from 'unfetch';
 import useSWR from 'swr';
 
-const fetcher = async (path) => {
-  const res = await fetch(path);
-
-  return res.json();
-};
+const fetcher = (path) => fetch(path).then((res) => res.json());
 
 const Index = () => {
   const { data, error } = useSWR('/api/venues', fetcher);
 
-  if (error) {
-    return <div>Failed to load...</div>;
-  }
-
-  if (!data) {
-    return <div>Loading...</div>;
-  }
+  if (error) return <div>Failed to load...</div>;
+  if (!data) return <div>Loading...</div>;
 
   return (
     <>

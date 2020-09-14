@@ -11,6 +11,7 @@ export default async (req, res) => {
       try {
         const venues = await Venue.find({});
         res.status(200).json(venues);
+        console.log(req.method);
       } catch (error) {
         res.status(400).json({ success: false });
       }
