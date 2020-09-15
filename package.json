@@ -8,13 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@hapi/iron": "^6.0.0",
+    "@magic-sdk/admin": "^1.2.2",
+    "cookie": "^0.4.1",
+    "firebase": "^7.20.0",
+    "magic-sdk": "^2.6.0",
     "mongoose": "^5.10.5",
     "next": "9.5.1",
     "react": "16.13.1",
-    "react-device-detect": "^1.13.1",
     "react-dom": "16.13.1",
-    "swr": "^0.3.2",
-    "unfetch": "^4.1.0"
+    "react-icons": "^3.11.0",
+    "swr": "^0.3.2"
   },
   "devDependencies": {
     "postcss-flexbugs-fixes": "^4.2.1",
