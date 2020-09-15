@@ -22,7 +22,7 @@ const Store = ({ children }) => {
       await setMagic(m);
 
       /* On page refresh, send a request to /api/user to see if there's a valid user session */
-      let res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/user`);
+      let res = await fetch('/api/user');
       let data = await res.json();
 
       /* If the user has a valid session with our server, it will return {authorized: true, user: user} */

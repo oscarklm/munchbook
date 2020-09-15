@@ -12,7 +12,7 @@ const Layout = () => {
    * Log the user out of their session with Magic
    */
   const handleLogout = async () => {
-    await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/user/logout`, {
+    await fetch('/api/user/logout', {
       method: 'GET'
     });
     setLoggedIn(false);

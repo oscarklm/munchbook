@@ -13,15 +13,12 @@ const Login = () => {
 
   const authenticateWithDb = async (DIDT) => {
     /* Pass the Decentralized ID token in the Authorization header to the database */
-    let res = await fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/user/login`,
-      {
-        method: 'POST',
-        headers: new Headers({
-          Authorization: 'Bearer ' + DIDT
-        })
-      }
-    );
+    let res = await fetch('/api/user/login', {
+      method: 'POST',
+      headers: new Headers({
+        Authorization: 'Bearer ' + DIDT
+      })
+    });
 
     let data = await res.json();
 
