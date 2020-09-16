@@ -68,12 +68,18 @@ const Login = () => {
         </>
       ) : (
         <div className="max-w-md gap-2 p-4 m-auto">
-          <h4 className="my-2 font-medium text-gray-600">Enter your email</h4>
+          <h4 className="my-4 text-3xl font-medium text-center text-gray-600">
+            Log into your account
+          </h4>
           <form className="w-full">
             <input
-              className="w-full border-2 shadow-sm"
+              className="w-full h-10 p-2 border-2 shadow-sm"
               type="email"
               value={email}
+              placeholder="your@email.com"
+              onFocus={(e) => {
+                e.target.placeholder = '';
+              }}
               onChange={(e) => {
                 setErrorMsg(''); // remove error msg
                 setEmail(e.target.value);
@@ -81,7 +87,7 @@ const Login = () => {
             />
             <div className="error-msg">{errorMsg}</div>
             <input
-              className="w-full p-2 mt-3 font-bold text-gray-600 bg-teal-300 rounded-md cursor-pointer"
+              className="w-full p-2 mt-4 font-bold text-gray-200 bg-gray-800 rounded-lg cursor-pointer hover:bg-blue-500"
               type="submit"
               value="Log in"
               disabled={disableLogin}

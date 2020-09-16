@@ -22,15 +22,17 @@ const Layout = () => {
   return (
     <>
       <Head>
-        <title>Next Magic Todo</title>
+        <title>MunchBook</title>
       </Head>
-      <nav className="items-center justify-between gap-3 p-4 text-sm font-medium text-white bg-gray-800 sm:flex sm:text-xl">
-        <div className="">TheMunchBook</div>
+      <nav className="flex items-center justify-between p-4 bg-gray-300 shadow-md sm:text-xl">
+        <Link href="/">
+          <img width="60" height="60" src="/img/logo.svg"></img>
+        </Link>
         {/* If a user is logged in, show our Welcome message and Logout button */}
         {loggedIn ? (
           <>
             <div className="">Welcome, {loggedIn}</div>
-            <div className="inline-block p-2 text-gray-800 bg-red-500 rounded-lg cursor-pointer hover:text-white">
+            <div className="inline-block p-2 text-gray-200 bg-gray-800 rounded-lg cursor-pointer hover:bg-red-700">
               <a
                 onClick={(e) => {
                   e.preventDefault();
@@ -45,7 +47,7 @@ const Layout = () => {
           // Else, show the Login button
           <>
             <Link href="/login">
-              <div className="inline-block p-2 text-gray-800 bg-pink-500 rounded-lg cursor-pointer hover:text-white">
+              <div className="inline-block px-5 py-4 font-bold text-gray-200 bg-gray-800 rounded-lg cursor-pointer hover:bg-blue-500">
                 <a>Log in</a>
               </div>
             </Link>

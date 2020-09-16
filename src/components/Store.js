@@ -1,7 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
 import { Magic } from 'magic-sdk';
-import Layout from './Layout';
-
 /* initializing context API values */
 export const MagicContext = createContext();
 export const LoggedInContext = createContext();
@@ -41,7 +39,6 @@ const Store = ({ children }) => {
     <LoggedInContext.Provider value={[loggedIn, setLoggedIn]}>
       <MagicContext.Provider value={[magic]}>
         <LoadingContext.Provider value={[isLoading, setIsLoading]}>
-          <Layout />
           {children}
         </LoadingContext.Provider>
       </MagicContext.Provider>
