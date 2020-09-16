@@ -31,8 +31,8 @@ const Layout = () => {
         {/* If a user is logged in, show our Welcome message and Logout button */}
         {loggedIn ? (
           <>
-            <div className="">Welcome, {loggedIn}</div>
-            <div className="inline-block p-2 text-gray-200 bg-gray-800 rounded-lg cursor-pointer hover:bg-red-700">
+            <div className="text-center">Welcome, {loggedIn}</div>
+            <div className="inline-block px-5 py-4 font-bold text-gray-200 bg-gray-800 rounded-lg cursor-pointer hover:bg-red-700">
               <a
                 onClick={(e) => {
                   e.preventDefault();

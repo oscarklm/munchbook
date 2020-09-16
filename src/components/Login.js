@@ -73,7 +73,7 @@ const Login = () => {
           </h4>
           <form className="w-full">
             <input
-              className="w-full h-10 p-2 border-2 shadow-sm"
+              className="w-full h-10 p-2 border-2"
               type="email"
               value={email}
               placeholder="your@email.com"
